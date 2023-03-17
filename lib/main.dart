@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:green_shop/router/route_generator.dart';
+import 'package:green_shop/locator.dart';
+import 'package:green_shop/router/router.dart';
+import 'package:green_shop/services/navigation_service.dart';
 import 'package:green_shop/ui/layout/main_layout_page.dart';
 
-void main() => runApp(const MyApp());
+void main() {
+  setupLocator();
+  Flurorouter.configureRoutes();
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -13,10 +19,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Green shop',
       initialRoute: '/home',
-      onGenerateRoute: RouteGenerator.generateRoute,
+      onGenerateRoute: Flurorouter.router.generator,
+      navigatorKey: locator<NavigationService>().navigatorKey,
       builder: ( _, child ) {
         return MainLayoutPage(
-          child: child ?? Container(),
+          child: child ?? Container(child: Text('Hola'),),
         );
       },
     );
