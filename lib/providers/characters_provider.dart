@@ -14,16 +14,24 @@ class CharactersProvider {
   
     final Map<String,dynamic> decodedData = json.decode(resp.body);
 
-    final List<CharacterModel> productos = [];
+    final List<CharacterModel> personajes = [];
     if(decodedData['results'] == null ) return [];
     final data = decodedData['results'];
-    print('gola');
     data.forEach((personaje) {
       final prodTemp = CharacterModel.fromJson(personaje);
-      productos.add(prodTemp);
+      personajes.add(prodTemp);
     });
 
 
-    return productos;
+    return personajes;
+  }
+
+
+  Future<CharacterModel?> cargarPersonajeId(id) async {
+    final url = Uri.parse('$_url/${id.toString()}');
+    final resp = await http.get(url);
+
+    final decodedData = json.decode(resp.body);
+    return CharacterModel.fromJson(decodedData);
   }
 }
