@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "462543930819",
+    "project_id": "protege-app-805c0",
+    "storage_bucket": "protege-app-805c0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:462543930819:android:e086d659d82f99a06ce976",
+        "android_client_info": {
+          "package_name": "com.example.green_shop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "462543930819-4t52kqd49duodvdrq7tt3elc5hhu69of.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZTc-pnrSqTkWMm8OsgVpGQjkgAJKWDRk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "462543930819-4t52kqd49duodvdrq7tt3elc5hhu69of.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

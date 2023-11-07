@@ -40,7 +40,22 @@
   <script src="flutter.js" defer></script>
 </head>
 <body>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
   <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAdVlaTTQ8yZhu-dh0Juy55qfstETjSHok",
+      authDomain: "protege-app-805c0.firebaseapp.com",
+      projectId: "protege-app-805c0",
+      storageBucket: "protege-app-805c0.appspot.com",
+      messagingSenderId: "462543930819",
+      appId: "1:462543930819:web:bdded88ec0fe14b26ce976"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script>
+
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
       _flutter.loader.loadEntrypoint({
